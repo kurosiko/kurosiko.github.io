@@ -9,6 +9,7 @@
     <style>
       body {
     margin-left: 3%;
+    margin-right: 3%;
     background-color: #b5a59f;
   }
   
@@ -19,19 +20,9 @@
     'GRAD' 0,
     'opsz' 48
   }
-  
   .indent {
     margin-left: 3%;
   }
-  
-  #title {
-    background-color: #b5a59f;
-    border-radius: 10px;
-    margin: auto;
-    padding: 10px 5px;
-    color: #F8F8F8;
-  }
-  
   .menu {
     display: flex;
     margin-top: 2%;
@@ -60,13 +51,24 @@
   }
   
   .row1 {
+    position: relative;
     display: flex;
     background-color: #D1C9C9;
     gap: 2%;
     align-items: center;
     border-radius: 10px;
-    margin-right: 3%;
     width: 100%;
+    animation: app 2s ease-in-out forwards;
+  }
+  @keyframes app{
+    0%{
+      margin-left: 15%;
+      opacity: 0;
+    }
+    100%{
+      margin-left: 0%;
+      opacity: 1;
+    }
   }
   
   .clientPos {
@@ -83,6 +85,15 @@
     flex-direction: column;
     gap: 10px;
     font-size: large;
+    animation: prof 2s ease-in-out forwards;
+  }
+  @keyframes prof{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
   #cover {
     position: relative;
@@ -99,6 +110,22 @@
     padding: 1%;
     border-radius: 10px;
     background-color: #D1B3B3;
+  }
+  #title{
+    background-color: #756e6b;
+    border-radius: 10px;
+    padding: 1%;
+    color: #F8F8F8;
+    animation: title 1s ease forwards;
+  }
+  @keyframes title{
+    0%{
+      opacity: 0;
+      padding-left: 10%;
+    }
+    100%{
+      opacity: 1;
+    }
   }
     </style>
   </head>
@@ -153,8 +180,8 @@
           <img  id="cover" src=""/>
         </div>
         <div class="clientPos">
-          <h1 id="test">TEST</h1>
-          <h1 id="test2">TEST</h1>
+          <h1 id="textX">TEST</h1>
+          <h1 id="textY">TEST</h1>
         </div>
       </div>
     </div>
